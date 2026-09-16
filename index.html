@@ -3,18 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Arav Dash, a software developer and data science student at Georgia Tech.">
+  <meta name="description" content="Portfolio of Arav Dash, a Georgia Tech Computer Engineering student working on AI systems, robotics, and software engineering.">
   <title>Arav Dash | Software Developer</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+    <filter id="glass-distortion" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="6" result="noise" />
+      <feGaussianBlur in="noise" stdDeviation="3" result="blurred" />
+      <feDisplacementMap in="SourceGraphic" in2="blurred" scale="26" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
   <header class="site-header">
     <nav class="navigation" aria-label="Primary navigation">
       <a class="wordmark" href="#top">AD</a>
       <div class="nav-links">
-        <a href="#featured">Featured</a>
-        <a href="#work">Work</a>
         <a href="#about">About</a>
+        <a href="#swe">SWE</a>
+        <a href="#applied-ai">AI</a>
+        <a href="#robotics">Robotics</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -23,98 +31,392 @@
   <main id="top">
     <section class="hero">
       <p class="eyebrow">Georgia Institute of Technology</p>
-      <h1>Arav Dash</h1>
-      <p class="intro">I build thoughtful software and explore data-driven systems.</p>
+      <h1>Arav <span class="highlight">Dash</span></h1>
       <div class="hero-links">
         <a class="button button-primary" href="https://github.com/aravdash" target="_blank" rel="noreferrer">GitHub</a>
         <a class="button button-secondary" href="https://www.linkedin.com/in/arav-dash-407a1725a/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </section>
 
-    <section class="section featured-section" id="featured" aria-labelledby="featured-heading">
+    <section class="section" id="about" aria-labelledby="about-heading">
       <div class="section-heading">
-        <p class="eyebrow">Featured project</p>
-        <h2 id="featured-heading">Movies Store</h2>
+        <p class="eyebrow">About</p>
+        <h2 id="about-heading">Timeline</h2>
       </div>
-      <div class="featured-grid">
-        <div class="featured-copy">
-          <p>A full-stack Django web application that lets users browse a movie catalog, search titles, manage a shopping cart, place orders, and read or write reviews &mdash; with a full admin dashboard for managing users, movies, reviews, and orders.</p>
-          <p>Built as a course project following <em>Django 5 for the Impatient</em> step-by-step, then deployed live on PythonAnywhere. The project was developed iteratively over several recorded work sessions covering design, coding, debugging, and deployment.</p>
-          <div class="tag-list">
-            <span class="tag">Django</span>
-            <span class="tag">Python</span>
-            <span class="tag">SQLite</span>
-            <span class="tag">Bootstrap</span>
-            <span class="tag">PythonAnywhere</span>
+      <p class="section-intro">I'm a Computer Engineering student at Georgia Tech, and I spend most of my time on AI systems, robotics, and the software that glues it all together. Click the dot below to walk through it.</p>
+      <p class="section-meta">B.S. Computer Engineering &middot; Georgia Institute of Technology &middot; 2024&ndash;2028</p>
+      <div class="timeline" id="timeline">
+        <div class="timeline-track">
+          <div class="timeline-fill" id="timeline-fill"></div>
+          <button type="button" class="timeline-dot" id="timeline-dot" aria-label="Play the timeline"></button>
+          <span class="timeline-hint" id="timeline-hint">Click to explore</span>
+        </div>
+        <div class="timeline-items">
+          <div class="timeline-row">
+            <div class="timeline-item side-left">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">Jun 2020 &ndash; Jun 2025</span>
+                  <span class="timeline-role">Software Development Associate &middot; Digi-Safari LLC</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Boosted learner engagement by implementing an AI-powered code lab with real-time feedback via the OpenAI API</li>
+                  <li>Built a Docker-based sandbox on AWS EC2 for running code with resource limits, network isolation, and timeouts</li>
+                  <li>Reduced analysis time by 25% by designing Python dashboards to automate training insights for 200+ users</li>
+                  <li>Collaborated with senior engineers to create 20+ technical presentations on cloud, ML, and software systems</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item side-right">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">2020 &ndash; 2024</span>
+                  <span class="timeline-role">Leadership Team &middot; FIRST Robotics Competition</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Competed each build season, designing, programming, and iterating a competition robot under strict deadlines</li>
+                  <li>Collaborated with a student team across mechanical, electrical, and software subsystems</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="hero-links">
-            <a class="button button-primary" href="https://aravdash17.pythonanywhere.com/" target="_blank" rel="noreferrer">Live demo</a>
-            <a class="button button-secondary" href="https://youtu.be/dfwCuxDxc9Q" target="_blank" rel="noreferrer">Demo video</a>
+          <div class="timeline-row">
+            <div class="timeline-item side-left">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">Aug 2024 &ndash; Dec 2025</span>
+                  <span class="timeline-role">Robotics Engineer &middot; URC Robotics</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Designed a layered costmap integrating elevation, obstacles, inflation, and static maps for real-time navigation</li>
+                  <li>Implemented an A* global planner over the layered costmap to compute lowest-cost routes across terrain</li>
+                  <li>Built EKF-based localization fusing GPS, IMU, and odometry through a Nav2 navsat transform node</li>
+                  <li>Led the design of a custom swerve drive module with terrain-optimized wheels for omnidirectional mobility</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-item side-right">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">Jun 2025 &ndash; Aug 2025</span>
+                  <span class="timeline-role">Data Science Intern &middot; Tredence Inc.</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Improved reporting efficiency by 20% by engineering SQL/Snowflake pipelines using CTEs and window functions</li>
+                  <li>Enabled executives to spot cost-saving opportunities by performing EDA and visualizing KPIs in matplotlib/Excel</li>
+                  <li>Enhanced stakeholder decision-making by delivering clear sprint reports and project timelines</li>
+                  <li>Increased accuracy of client deliverables by delivering 3 team analyses that uncovered data issues in cloud sources</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-item side-left">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">Aug 2025 &ndash; Present</span>
+                  <span class="timeline-role">AI Benchmarking Analyst &middot; Mercor</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Evaluated AI model outputs for education use cases on a rubric-based benchmarking project</li>
+                  <li>Reviewed lesson plans, counseling responses, and school operations recommendations against structured rubrics for accuracy and best-practice alignment</li>
+                  <li>Organized content by subject and grade level, providing clear feedback to improve the clarity and reliability of AI-generated materials</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-item side-right">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">Aug 2025 &ndash; Jan 2026</span>
+                  <span class="timeline-role">AI Engineer Intern &middot; EzMedTech</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Fine-tuned an Orpheus TTS voice model on consented voice-actor data to create a custom, branded voice</li>
+                  <li>Built a speech-to-speech pipeline using Deepgram Nova-3, OpenAI, and Orpheus TTS for clinic service desks</li>
+                  <li>Engineered real-time VAD and barge-in handling to eliminate interruption cross-talk</li>
+                  <li>Reduced end-to-end voice latency by 62% (1200ms &rarr; 450ms) through streaming pipeline optimizations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-item side-left">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">Jun 2026 &ndash; Aug 2026</span>
+                  <span class="timeline-role">Software Engineering Intern &middot; NCR Voyix</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Automated helpdesk requests by developing a voice agent in Google CX Agent Studio for 5,000+ employees</li>
+                  <li>Cut data agent build time 50% with a reusable natural language query template using LangChain and Genie Spaces</li>
+                  <li>Strengthened compliance monitoring by building a Databricks SQL pipeline evaluating 1M+ expense transactions</li>
+                  <li>Automated invoice management by developing an AI agent for tracking 1,000+ invoices and sending emails</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-row">
+            <div class="timeline-item side-right">
+              <button type="button" class="timeline-toggle" aria-expanded="false">
+                <span class="timeline-meta">
+                  <span class="timeline-date">Aug 2026 &ndash; Current</span>
+                  <span class="timeline-role">Embedded Software Researcher &middot; AquaBots</span>
+                </span>
+                <span class="timeline-caret" aria-hidden="true">+</span>
+              </button>
+              <div class="timeline-details">
+                <ul>
+                  <li>Current embedded software research project building a fleet of autonomous micro-robots for mapping aquatic environments</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="featured-features">
-          <h3>What it does</h3>
-          <ul class="feature-list">
-            <li>Account registration &amp; login for personalized access</li>
-            <li>Browse, search, and view details for the movie catalog</li>
-            <li>Shopping cart: add items, clear cart, and checkout</li>
-            <li>Order history so users can track past purchases</li>
-            <li>Create, edit, delete, and report movie reviews</li>
-            <li>Admin tools to manage users, movies, reviews, and orders</li>
-            <li>Responsive UI usable on any desktop browser</li>
+      </div>
+    </section>
+
+    <section class="section" id="swe" aria-labelledby="swe-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Experience &amp; interests</p>
+        <h2 id="swe-heading">Software Engineering</h2>
+      </div>
+      <div class="subtopic-grid subtopic-grid-3">
+        <div class="subtopic-card subtopic-featured">
+          <p class="eyebrow">Full-stack &middot; Featured project</p>
+          <h3>Movies Store</h3>
+          <div class="featured-grid">
+            <div class="featured-copy">
+              <p>A full-stack Django app for browsing movies, leaving reviews, and actually buying stuff: cart, checkout, order history, plus an admin dashboard behind the scenes to keep it all in check.</p>
+              <p>I built it by working straight through <em>Django 5 for the Impatient</em> chapter by chapter, then shipped it live on PythonAnywhere. Took a few sessions of coding, breaking it, and fixing it again before it felt done.</p>
+              <div class="tag-list">
+                <span class="tag">Django</span>
+                <span class="tag">Python</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Bootstrap</span>
+                <span class="tag">PythonAnywhere</span>
+              </div>
+              <div class="hero-links">
+                <a class="button button-primary" href="https://aravdash17.pythonanywhere.com/" target="_blank" rel="noreferrer">Live demo</a>
+                <a class="button button-secondary" href="https://youtu.be/dfwCuxDxc9Q" target="_blank" rel="noreferrer">Demo video</a>
+              </div>
+            </div>
+            <div class="featured-features">
+              <h3>What it does</h3>
+              <ul class="feature-list">
+                <li>Account registration &amp; login for personalized access</li>
+                <li>Browse, search, and view details for the movie catalog</li>
+                <li>Shopping cart: add items, clear cart, and checkout</li>
+                <li>Order history so users can track past purchases</li>
+                <li>Create, edit, delete, and report movie reviews</li>
+                <li>Admin tools to manage users, movies, reviews, and orders</li>
+                <li>Responsive UI usable on any desktop browser</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="subtopic-card subtopic-collapsible">
+          <button type="button" class="subtopic-toggle" aria-expanded="false">
+            <span>
+              <span class="eyebrow">Full-stack &middot; April 2025</span>
+              <h3>Patch</h3>
+            </span>
+            <span class="subtopic-caret" aria-hidden="true">+</span>
+          </button>
+          <div class="subtopic-body">
+            <ul class="subtopic-list">
+              <li>Implemented real-time image classification and messaging flow within a Bootstrap-styled Flask chat interface.</li>
+              <li>Built a 2,000+ image dataset by scraping and labeling housing issue photos from forums.</li>
+              <li>Improved classification accuracy by training a ResNet-34 model to detect mold, pests, and structural damage.</li>
+              <li>Enforced tenant/landlord permissions with Firebase role-based authentication.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Roboflow</span>
+              <span class="tag">Bootstrap</span>
+            </div>
+            <div class="subtopic-extra">
+              <p><a href="https://github.com/Rishav-N/patch" target="_blank" rel="noreferrer">View project &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="subtopic-card subtopic-collapsible">
+          <button type="button" class="subtopic-toggle" aria-expanded="false">
+            <span>
+              <span class="eyebrow">Full-stack &middot; Jun&ndash;Jul 2025</span>
+              <h3>Sketch3D Generator</h3>
+            </span>
+            <span class="subtopic-caret" aria-hidden="true">+</span>
+          </button>
+          <div class="subtopic-body">
+            <ul class="subtopic-list">
+              <li>Built a React/Fabric.js canvas in Next.js for freehand and image input, persisting sketches for AI classification.</li>
+              <li>Created a Flask API with multi-process PIL I/O and a PyTorch Faster R-CNN trained on Google's QuickDraw.</li>
+              <li>Implemented OpenCV/SciPy vectorization to convert raster sketches into smooth SVGs for 3D extrusion.</li>
+              <li>Automated Shapely and Trimesh STL export for concave shapes, generating 50+ 3D printable models per session.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Python</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Three.js</span>
+              <span class="tag">OpenCV</span>
+            </div>
+            <div class="subtopic-extra">
+              <p><a href="https://github.com/aravdash/keychain" target="_blank" rel="noreferrer">View project &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="subtopic-card subtopic-collapsible">
+          <button type="button" class="subtopic-toggle" aria-expanded="false">
+            <span>
+              <span class="eyebrow">Full-stack &middot; July 2025</span>
+              <h3>Notes Summarizer</h3>
+            </span>
+            <span class="subtopic-caret" aria-hidden="true">+</span>
+          </button>
+          <div class="subtopic-body">
+            <ul class="subtopic-list">
+              <li>Developed an end-to-end RAG workflow with DRF endpoints that ingest user-uploaded PDFs via OCR.</li>
+              <li>Streamlined vector ingestion via an ingest API using LangChain/OpenAI, upserting embeddings into Pinecone.</li>
+              <li>Powered semantic retrieval with a search endpoint that queries Pinecone for top-K context snippets.</li>
+              <li>Established the user workflow with a React interface for file upload and summarization.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Django</span>
+              <span class="tag">DRF</span>
+              <span class="tag">Pinecone</span>
+              <span class="tag">PaddleOCR</span>
+              <span class="tag">React</span>
+            </div>
+            <div class="subtopic-extra">
+              <p><a href="https://github.com/salsabat/NotesSum/" target="_blank" rel="noreferrer">View project &rarr;</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="subtopic-card subtopic-collapsible">
+          <button type="button" class="subtopic-toggle" aria-expanded="false">
+            <span>
+              <span class="eyebrow">Distributed systems</span>
+              <h3>RoboFleet</h3>
+            </span>
+            <span class="subtopic-caret" aria-hidden="true">+</span>
+          </button>
+          <div class="subtopic-body">
+            <ul class="subtopic-list">
+              <li>Built a platform coordinating 100+ autonomous agents via Redis Streams and WebSocket telemetry ingestion.</li>
+              <li>Engineered a task scheduler with heartbeat monitoring, priority queuing, and automatic task reassignment.</li>
+              <li>Containerized the stack with Docker/Kubernetes CI/CD, enabling pod autoscaling and liveness probes.</li>
+              <li>Integrated a map sync service merging distributed robot spatial data with live Prometheus/Grafana dashboards.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="subtopic-card subtopic-collapsible">
+          <button type="button" class="subtopic-toggle" aria-expanded="false">
+            <span>
+              <span class="eyebrow">Data &amp; infra</span>
+              <h3>Pipelines &amp; platforms</h3>
+            </span>
+            <span class="subtopic-caret" aria-hidden="true">+</span>
+          </button>
+          <div class="subtopic-body">
+            <ul class="subtopic-list">
+              <li>Built a Databricks SQL pipeline evaluating 1M+ expense transactions for compliance monitoring (NCR Voyix).</li>
+              <li>Built a Docker-based sandbox on AWS EC2 to run untrusted code with resource limits, network isolation, and timeouts (Digi-Safari).</li>
+              <li>Designed Python dashboards automating training insights for 200+ users, cutting analysis time 25%.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section applied-ai-section" id="applied-ai" aria-labelledby="applied-ai-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Experience &amp; interests</p>
+        <h2 id="applied-ai-heading">AI</h2>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card">
+          <p class="eyebrow">Conversational</p>
+          <h3>Voice &amp; dialogue systems</h3>
+          <p>The back-and-forth stuff. You ask something, you get an answer. This is where I've spent time fine-tuning TTS voices and shaving milliseconds off speech pipelines.</p>
+          <div class="chat-window">
+            <div class="chat-log" id="chat-log">
+              <div class="chat-bubble bot">Hi! Pick a question below to see how I'd answer it.</div>
+            </div>
+            <div class="chat-questions" id="chat-questions">
+              <button type="button" class="chat-question" data-answer="I built a voice agent in Google CX Agent Studio that handles common IT helpdesk requests for 5,000+ employees, so people can resolve routine issues by talking instead of filing a ticket and waiting on a person.">What did you build for NCR's helpdesk?</button>
+              <button type="button" class="chat-question" data-answer="At EzMedTech I used Deepgram Nova-3 for speech-to-text, OpenAI for response generation, and a custom fine-tuned Orpheus TTS model trained on consented voice-actor data so the clinic had its own branded voice instead of a generic one.">What voice stack did you build at EzMedTech?</button>
+              <button type="button" class="chat-question" data-answer="For Patch I built a Bootstrap-styled Flask chat interface so tenants and landlords could message each other directly, with real-time image classification flagging mold, pests, or structural damage right in the conversation.">What chat interface did you build for Patch project?</button>
+            </div>
+          </div>
+        </div>
+        <div class="ai-card">
+          <p class="eyebrow">Agentic</p>
+          <h3>Autonomous task pipelines</h3>
+          <p>No dialogue here. You make one request and the system just runs with it: planning, calling tools, pulling context, and getting the task done on its own.</p>
+          <div class="agent-window">
+            <div class="agent-tasks" id="agent-tasks">
+              <button type="button" class="agent-task" data-task="invoice">Automate invoice tracking</button>
+              <button type="button" class="agent-task" data-task="data">Query expense data</button>
+              <button type="button" class="agent-task" data-task="rag">Summarize uploaded notes</button>
+            </div>
+            <div class="pipeline" id="pipeline">
+              <p class="pipeline-placeholder" id="pipeline-placeholder">Select a task above to run the pipeline.</p>
+              <div class="pipeline-steps" id="pipeline-steps"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="robotics" aria-labelledby="robotics-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Experience &amp; interests</p>
+        <h2 id="robotics-heading">Robotics</h2>
+      </div>
+      <div class="subtopic-grid">
+        <div class="subtopic-card">
+          <p class="eyebrow">Autonomous mapping &amp; navigation</p>
+          <h3>Programming-centered systems</h3>
+          <ul class="subtopic-list">
+            <li><strong>URC Robotics</strong>: layered costmap fusing elevation, obstacles, inflation, and static maps; A* global planner for lowest-cost terrain routes; EKF-based localization fusing GPS, IMU, and odometry through a Nav2 navsat transform node.</li>
+            <li><strong>GMMap Research</strong>: benchmarked GMMap against OctoMap on real TurtleBot sensor data, measuring a 9.1x reduction in peak RAM; built an offline mapping pipeline from rosbag recordings to 3D visualization using SLAM Toolbox and Open3D.</li>
+            <li><strong>AquaBots</strong>: ongoing embedded software research on a fleet of autonomous micro-robots for mapping aquatic environments.</li>
           </ul>
         </div>
-      </div>
-      <div class="featured-process">
-        <h3>Process</h3>
-        <p>Development followed the textbook's chapter progression &mdash; models and the admin site first, then views, templates, authentication, cart/order logic, and reviews &mdash; with each stage tested locally before deploying updates to PythonAnywhere. Work was logged across multiple recorded sessions covering design decisions, debugging, and deployment steps.</p>
-      </div>
-    </section>
-
-    <section class="section" id="work" aria-labelledby="work-heading">
-      <div class="section-heading">
-        <p class="eyebrow">Selected work</p>
-        <h2 id="work-heading">Projects</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-content">
-            <h3>NoteSum</h3>
-            <p>OCR and retrieval-augmented note organization with summaries and a chat interface.</p>
-            <a href="https://github.com/salsabat/NotesSum/" target="_blank" rel="noreferrer">View project <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-content">
-            <h3>Sketch3D</h3>
-            <p>A tool that converts sketches into printable STL files using Faster R-CNN.</p>
-            <a href="https://github.com/aravdash/keychain" target="_blank" rel="noreferrer">View project <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-content">
-            <h3>Cat Project</h3>
-            <p>A CatAPI application for discovering and favoriting random cat images and GIFs.</p>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-content">
-            <h3>Patch</h3>
-            <p>A tenant-landlord communication platform with image classification and legal reports.</p>
-            <a href="https://github.com/Rishav-N/patch" target="_blank" rel="noreferrer">View project <span aria-hidden="true">&rarr;</span></a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section split-section" id="about" aria-labelledby="about-heading">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2 id="about-heading">Software development with a data science mindset.</h2>
-      </div>
-      <div class="about-copy">
-        <p>I am a Georgia Tech student interested in software development, machine learning, and the practical systems around them.</p>
-        <p>I enjoy turning complex ideas into useful, approachable products.</p>
+        <div class="subtopic-card">
+          <p class="eyebrow">Design &amp; CAD</p>
+          <h3>Mechanical systems</h3>
+          <ul class="subtopic-list">
+            <li>Led the design of a custom swerve drive module with terrain-optimized wheels for omnidirectional mobility (URC Robotics).</li>
+            <li>Modeled and iterated mechanical components in SolidWorks alongside the software and controls stack.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -122,17 +424,123 @@
       <p class="eyebrow">Toolkit</p>
       <h2 id="skills-heading">Skills</h2>
       <div class="skills">
-        <div><h3>Languages</h3><p>Python, JavaScript, TypeScript, Java, SQL, R, HTML, CSS</p></div>
-        <div><h3>Frameworks</h3><p>React, Flask, Django, JUnit, ROS, Bootstrap, Node.js</p></div>
-        <div><h3>Tools &amp; Platforms</h3><p>Git, Docker, Firebase, Google Cloud, Vercel, TensorFlow, PyTorch, OpenAI, Pinecone</p></div>
+        <div><h3>Languages</h3><p>Python, C++, Java, TypeScript/JavaScript, SQL, VHDL, Assembly (RISC-V), HTML, R</p></div>
+        <div><h3>Frameworks</h3><p>React, Flask, Django, ROS2, Nav2, JUnit, Bootstrap, Tailwind CSS</p></div>
+        <div><h3>Tools &amp; Platforms</h3><p>Git, Docker, Kubernetes, Firebase, Google Cloud, AWS, Vercel, TensorFlow, PyTorch, OpenAI, Pinecone</p></div>
       </div>
     </section>
   </main>
 
   <footer id="contact">
-    <p>Interested in working together?</p>
-    <a href="https://www.linkedin.com/in/arav-dash-407a1725a/" target="_blank" rel="noreferrer">Get in touch <span aria-hidden="true">&rarr;</span></a>
+    <p>Let's connect.</p>
+    <div class="tag-list">
+      <a class="tag tag-link" href="https://www.linkedin.com/in/arav-dash-407a1725a/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="tag tag-link" href="mailto:arav.dash@gmail.com">arav.dash@gmail.com</a>
+    </div>
     <small>&copy; 2026 Arav Dash</small>
   </footer>
+
+  <script>
+    document.getElementById('timeline').addEventListener('click', function (event) {
+      var button = event.target.closest('.timeline-toggle');
+      if (!button) return;
+      var item = button.closest('.timeline-item');
+      var isOpen = item.classList.toggle('open');
+      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    var timelineEl = document.getElementById('timeline');
+    var timelineDot = document.getElementById('timeline-dot');
+    var timelineItems = document.querySelectorAll('.timeline-item');
+    var TIMELINE_DURATION = 1400;
+
+    timelineDot.addEventListener('click', function () {
+      if (timelineEl.classList.contains('activated')) return;
+      timelineEl.classList.add('activated');
+      timelineItems.forEach(function (item, index) {
+        var delay = (TIMELINE_DURATION / (timelineItems.length + 1)) * (index + 1);
+        setTimeout(function () { item.classList.add('visible'); }, delay);
+      });
+    });
+
+    document.getElementById('swe').addEventListener('click', function (event) {
+      var button = event.target.closest('.subtopic-toggle');
+      if (!button) return;
+      var card = button.closest('.subtopic-collapsible');
+      var isOpen = card.classList.toggle('open');
+      button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.getElementById('chat-questions').addEventListener('click', function (event) {
+      var button = event.target.closest('.chat-question');
+      if (!button || button.disabled) return;
+      var questionsEl = document.getElementById('chat-questions');
+      var buttons = questionsEl.querySelectorAll('.chat-question');
+      buttons.forEach(function (b) { b.disabled = true; });
+
+      var log = document.getElementById('chat-log');
+      var userBubble = document.createElement('div');
+      userBubble.className = 'chat-bubble user';
+      userBubble.textContent = button.textContent;
+      log.appendChild(userBubble);
+      log.scrollTop = log.scrollHeight;
+
+      setTimeout(function () {
+        var typingBubble = document.createElement('div');
+        typingBubble.className = 'chat-bubble bot chat-typing';
+        typingBubble.innerHTML = '<span></span><span></span><span></span>';
+        log.appendChild(typingBubble);
+        log.scrollTop = log.scrollHeight;
+
+        setTimeout(function () {
+          typingBubble.remove();
+          var botBubble = document.createElement('div');
+          botBubble.className = 'chat-bubble bot';
+          log.appendChild(botBubble);
+
+          var words = button.dataset.answer.split(' ');
+          var chunks = [];
+          for (var i = 0; i < words.length; i += 3) {
+            chunks.push(words.slice(i, i + 3).join(' '));
+          }
+          var chunkIndex = 0;
+          var revealInterval = setInterval(function () {
+            botBubble.textContent = chunks.slice(0, chunkIndex + 1).join(' ');
+            log.scrollTop = log.scrollHeight;
+            chunkIndex++;
+            if (chunkIndex >= chunks.length) {
+              clearInterval(revealInterval);
+              buttons.forEach(function (b) { b.disabled = false; });
+            }
+          }, 90);
+        }, 1100);
+      }, 400);
+    });
+
+    var agentTasks = {
+      invoice: ['Detect new invoice', 'Extract line-item data', 'Check against policy', 'Send confirmation email'],
+      data: ['Receive plain-language question', 'Generate query with LangChain', 'Run against Databricks SQL', 'Return the insight'],
+      rag: ['Upload PDF notes', 'OCR extract text', 'Embed & upsert to Pinecone', 'Retrieve top-k & summarize']
+    };
+
+    document.getElementById('agent-tasks').addEventListener('click', function (event) {
+      var button = event.target.closest('.agent-task');
+      if (!button) return;
+      var steps = agentTasks[button.dataset.task];
+      var container = document.getElementById('pipeline-steps');
+      document.getElementById('pipeline-placeholder').style.display = 'none';
+      container.innerHTML = '';
+      steps.forEach(function (label, index) {
+        var step = document.createElement('div');
+        step.className = 'pipeline-step';
+        step.innerHTML = '<span class="step-index">' + (index + 1) + '</span><span class="step-label">' + label + '</span>';
+        container.appendChild(step);
+      });
+      var stepEls = container.querySelectorAll('.pipeline-step');
+      stepEls.forEach(function (el, index) {
+        setTimeout(function () { el.classList.add('active'); }, index * 450);
+      });
+    });
+  </script>
 </body>
 </html>
